@@ -6,7 +6,7 @@
   "main": "src/index.ts",
   "private": true,
   "scripts": {
-    "build": "bun build src/index.ts --outdir=dist --minify",
+    "build": "bun build src/index.ts --outdir=dist --minify --target=bun",
     "start": "bun run build --target=bun && bun run dist/index.js | pino-pretty",
     "dev": "nodemon --watch src --ext ts --exec bun run /src/index.ts | pino-pretty",
     "test": "bun test",
